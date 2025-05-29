@@ -1,0 +1,48 @@
+version: 0.0.1
+type: plugin
+author: fotor
+name: fotor_ai
+tags:
+- image
+- productivity
+label:
+  en_US: Fotor AI
+  ja_JP: Fotor AI
+  zh_Hans: Fotor AI
+  pt_BR: Fotor AI
+description:
+  en_US: Fotor AI Tools
+  ja_JP: Fotor AI Tools
+  zh_Hans: Fotor AI 工具
+  pt_BR: Fotor AI Tools
+icon: icon.svg
+resource:
+  memory: 1048576
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    app:
+      enabled: true
+plugins:
+  tools:
+    - provider/dify-plugin-broker.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-05-28T02:55:46.287941095+08:00
+privacy: PRIVACY.md
+verified: false
